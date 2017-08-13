@@ -14,4 +14,10 @@ class CodeDeviation(object):
 					numero = (numero) / (n - 1)
 					resultado = math.sqrt(numero)
 		return  resultado
+
+	def calcularNumerador(self,muestra):
+		resultado=None
+		return resultado
+
+
 		
