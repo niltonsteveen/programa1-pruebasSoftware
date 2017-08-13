@@ -14,6 +14,9 @@ class TestsRead(unittest.TestCase):
     def testReadNumbers(self):
         self.read.readFile("Code/numeros.txt")
         self.assertEqual([1,4,5,7,9],self.read.muestra)
+    def testFileNoExist(self):
+        response = self.read.readFile("Code/numerosx.txt")
+        self.assertFalse(response)
 
 if __name__ == '__main__':
     unittest.main()
