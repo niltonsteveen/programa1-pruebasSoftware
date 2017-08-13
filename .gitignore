@@ -1,2 +1,4 @@
 myenv
 *.pyc
+setuptools-33.1.1.zip
+.DS_Store

@@ -1,5 +1,5 @@
 PASOS:
-1) INSTALAR HEROU CLI
+1) INSTALAR HEROKU CLI
 2) TENER INSTALADO PYTHON (version 2.6 creo)
 3) INSTALAR PIP
 4) Instalar virtualenv: sudo pip install virtualenv
