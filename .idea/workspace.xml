@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8927624d-bcd6-466e-bcc4-539c00f77712" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/programa1-pruebas.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Code/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/niltonCode.py" afterPath="$PROJECT_DIR$/Code/niltonCode.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/niltonTest.py" afterPath="$PROJECT_DIR$/Test/niltonTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,17 +13,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="niltonCode.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="niltonCode.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/niltonCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            <state relative-caret-position="30">
+              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="niltonTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="niltonTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/niltonTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -213,14 +205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/niltonCode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/niltonTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -228,6 +212,14 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/niltonCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
