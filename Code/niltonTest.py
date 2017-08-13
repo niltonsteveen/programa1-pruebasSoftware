@@ -1,6 +1,6 @@
 import unittest
 
-from Code.niltonCode import CodeDeviation
+from niltonCode import CodeDeviation
 
 class TestsDeviation(unittest.TestCase):
 	def testVacio(self):
