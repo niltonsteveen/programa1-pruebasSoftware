@@ -17,6 +17,9 @@ class TestsDeviation(unittest.TestCase):
 		self.assertNotEqual(0,self.cd.calcularNumerador([3,4,5]))
 	def testCalcularNumeradorEntradaInvalida(self):
 		self.assertEqual(0, self.cd.calcularNumerador([3, 'fdasfa', 5]))
+	def testCalcularDesviacionFull(self):
+		array= [4.5,6,45.7]
+		print 'la desviacion estandar es: ' + str(self.cd.calcularDesviacion(self.cd.calcularNumerador(array), len(array)))
 
 if __name__ == '__main__':
 	unittest.main()
