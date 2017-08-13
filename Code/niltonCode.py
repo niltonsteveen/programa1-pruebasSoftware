@@ -19,7 +19,11 @@ class CodeDeviation(object):
 		resultado=0
 		media=45
 		for numero in muestra:
-			resultado=resultado+math.pow((numero-media),2)
+			if type(numero) == long or type(numero) == int or type(numero) == float:
+				resultado = resultado + math.pow((numero - media), 2)
+			else:
+				resultado=0
+				break
 		return resultado
 
 

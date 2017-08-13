@@ -14,9 +14,9 @@ class TestsDeviation(unittest.TestCase):
 	def testCalculoDesviacionConEntradasInvalidas(self):
 		self.assertEqual(None, self.cd.calcularDesviacion('jhgkghlgl',3))
 	def testCalcularNumerador(self):
-		self.assertFalse(0,self.cd.calcularNumerador([3,4,5]))
+		self.assertNotEqual(0,self.cd.calcularNumerador([3,4,5]))
 	def testCalcularNumeradorEntradaInvalida(self):
-		self.assertTrue(0, self.cd.calcularNumerador([3, 'fdasfa', 5]))
+		self.assertEqual(0, self.cd.calcularNumerador([3, 'fdasfa', 5]))
 
 if __name__ == '__main__':
 	unittest.main()
