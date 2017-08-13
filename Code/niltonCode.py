@@ -16,7 +16,10 @@ class CodeDeviation(object):
 		return  resultado
 
 	def calcularNumerador(self,muestra):
-		resultado=None
+		resultado=0
+		media=45
+		for numero in muestra:
+			resultado=resultado+math.pow((numero-media),2)
 		return resultado
 
 
