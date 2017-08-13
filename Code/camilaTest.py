@@ -11,7 +11,7 @@ class TestsRead(unittest.TestCase):
     def testOnlyRead(self):
         self.read.readFile("Code/numeros.txt")
         self.assertTrue(self.read.onlyRead())
-    def testReadNumbers():
+    def testReadNumbers(self):
         self.read.readFile("Code/numeros.txt")
         self.assertEqual([1,4,5,7,9],self.read.muestra)
 
