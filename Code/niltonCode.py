@@ -14,5 +14,4 @@ class CodeDeviation(object):
 					numero = (numero) / (n - 1)
 					resultado = math.sqrt(numero)
 		return  resultado
-
 		
