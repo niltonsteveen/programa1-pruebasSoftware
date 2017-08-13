@@ -15,7 +15,6 @@ class ReadFile(object):
     def onlyRead(self):
         return True if self.file.mode == 'r' else False
     def readFilename(self, readName):
-        self.filename = readName()
-        return
+        return readName()
     def readName():
         return raw_input("What file do you want to read? ")
