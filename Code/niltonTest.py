@@ -3,9 +3,12 @@ import unittest
 from niltonCode import CodeDeviation
 
 class TestsDeviation(unittest.TestCase):
+	cd = CodeDeviation()
 	def testVacio(self):
-		cd=CodeDeviation()
-		deviation=cd.standardDeviation
+		deviation=self.cd.standardDeviation
 		self.assertEqual(0,deviation)
+	def testRaizNegativa(self):
+		self.cd.calcularDesviacion(-1)
+
 if __name__ == '__main__':
 	unittest.main()
