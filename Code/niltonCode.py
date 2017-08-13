@@ -5,13 +5,14 @@ class CodeDeviation(object):
 	def calcularDesviacion(self,numero, n):
 		esNegativo=False
 		resultado=None
-		if numero<0:
-			esNegativo=True
-		else:
-			esNegativo=False
-			if n>1:
-				numero=(numero)/(n-1)
-				resultado = math.sqrt(numero)
+		if type(numero) == long or type(numero) == int or type(numero) == float:
+			if numero < 0:
+				esNegativo = True
+			else:
+				esNegativo = False
+				if n > 1:
+					numero = (numero) / (n - 1)
+					resultado = math.sqrt(numero)
 		return  resultado
 
 		
