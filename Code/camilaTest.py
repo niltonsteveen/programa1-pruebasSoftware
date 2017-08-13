@@ -21,7 +21,8 @@ class TestsRead(unittest.TestCase):
         output = self.read.readFilename(lambda: "Code/numbers.txt")
         self.assertEqual("Code/numbers.txt", output)
     def testReadFilenameAndFile(self):
-        output = self.read.readFilename(lambda: "Code/numbers.txt")
+        output = self.read.readFilename(lambda: "Code/numeros.txt")
+        self.read.readFile(output)
         self.assertNotEqual(None, self.read.file)
 
 if __name__ == '__main__':
