@@ -10,7 +10,7 @@ class TestsDeviation(unittest.TestCase):
 	def testRaizNegativa(self):
 		self.assertEqual(None,self.cd.calcularDesviacion(-1,2))
 	def testUnSoloItem(self):
-		self.cd.calcularDesviacion(5,1)
+		self.assertEqual(None, self.cd.calcularDesviacion(5, 1))
 
 if __name__ == '__main__':
 	unittest.main()

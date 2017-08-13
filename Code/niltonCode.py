@@ -9,8 +9,9 @@ class CodeDeviation(object):
 			esNegativo=True
 		else:
 			esNegativo=False
-			numero=(numero)/(n-1)
-			resultado = math.sqrt(numero)
+			if n>1:
+				numero=(numero)/(n-1)
+				resultado = math.sqrt(numero)
 		return  resultado
 
 		
