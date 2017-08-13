@@ -20,6 +20,9 @@ class TestsRead(unittest.TestCase):
     def testReadFileForConsole(self):
         output = self.read.readFilename(lambda: "Code/numbers.txt")
         self.assertEqual("Code/numbers.txt", output)
+    def testReadFilenameAndFile(self):
+        output = self.read.readFilename(lambda: "Code/numbers.txt")
+        self.assertNotEqual(None, self.read.file)
 
 if __name__ == '__main__':
     unittest.main()

@@ -4,7 +4,6 @@ class ReadFile(object):
     def __init__(self):
         self.file=None
         self.muestra=[]
-        self.filename = ""
     def readFile(self, filename):
         if not(os.path.exists(filename)):
             return False
