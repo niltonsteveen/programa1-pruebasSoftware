@@ -3,7 +3,8 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-	return render_template('./Template/template.html') 
+	content = get_file('./Template/template.html')
+    return Response(content, mimetype="text/html")
 
 @app.route('/saludo')
 def index1():
