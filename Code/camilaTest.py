@@ -24,6 +24,8 @@ class TestsRead(unittest.TestCase):
         output = self.read.readFilename(lambda: "Code/numeros.txt")
         self.read.readFile(output)
         self.assertNotEqual(None, self.read.file)
-
+    def testReadNotNumbers(self):
+        self.read.readFile("Code/noNumeros.txt")
+        self.failIf(True, 'Error! Your file contains non-numeric information')
 if __name__ == '__main__':
     unittest.main()
