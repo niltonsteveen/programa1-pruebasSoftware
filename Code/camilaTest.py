@@ -1,6 +1,7 @@
 import unittest
 
 from camilaCode import ReadFile
+from camilaCode import myExc
 
 class TestsRead(unittest.TestCase):
     def setUp(self):
@@ -25,7 +26,6 @@ class TestsRead(unittest.TestCase):
         self.read.readFile(output)
         self.assertNotEqual(None, self.read.file)
     def testReadNotNumbers(self):
-        self.read.readFile("Code/noNumeros.txt")
-        self.failIf(True, 'Error! Your file contains non-numeric information')
+        self.assertRaises(myExc)
 if __name__ == '__main__':
     unittest.main()

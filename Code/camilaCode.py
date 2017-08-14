@@ -1,5 +1,7 @@
 import os
 
+class myExc(Exception): print "Exception! Your file contains non-numeric information"
+
 class ReadFile(object):
     def __init__(self):
         self.file=None
@@ -8,8 +10,12 @@ class ReadFile(object):
         if not(os.path.exists(filename)):
             return False
         self.file = open(filename, 'r')
-        for line in self.file.readlines():
-            self.muestra.append(int(line))
+        try:
+            for line in self.file.readlines():
+                self.muestra.append(int(line))
+        except myExc:
+            raise myExc
+            return
         return True
     def onlyRead(self):
         return True if self.file.mode == 'r' else False
