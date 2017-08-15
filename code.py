@@ -18,10 +18,10 @@ def upload():
 			os.mkdir(target)"""
 
 		for file in request.files.getlist('file'):
-			#filename=file.filename
+			filename=file.filename
 			#destination='/'.join([target,filename])
 			#file.save(destination)
-		return file.filename
+		return filename
 
 		"""print 'entro por aca'
 		f=request.files['file']
