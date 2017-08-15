@@ -10,6 +10,10 @@ class TestNode(unittest.TestCase):
     def testCreateNode(self):
         self.node.createNode(3, None)
         self.assertEqual(3, self.node.data)
+    def testChangeLink(self):
+        node2 = Node()
+        self.node.changeLink(node2)
+        self.assertEqual(node2, self.node.link)
 
 class TestsLinkedList(unittest.TestCase):
     def setUp(self):
