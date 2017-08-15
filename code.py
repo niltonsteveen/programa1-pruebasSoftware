@@ -11,7 +11,7 @@ def upload():
 	if request.method == 'POST':
 		file = request.files['file']
 		return 'se cargo'
-	else
+	else :
 		return render_template('template.html')
 
 if __name__ == '__main__':
