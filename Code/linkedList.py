@@ -8,5 +8,8 @@ class LinkedList(object):
 
 class Node(object):
     def __init__(self):
-        pass
-    
+        data = None
+        link = None
+    def createNode(self, data, link):
+        self.data = data
+        self.link = link

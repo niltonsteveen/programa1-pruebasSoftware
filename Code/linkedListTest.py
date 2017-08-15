@@ -8,8 +8,8 @@ class TestNode(unittest.TestCase):
     def setUp(self):
         self.node = Node()
     def testCreateNode(self):
-        node = self.node.createNode("3")
-        self.assertEqual(3, node.data)
+        self.node.createNode(3, None)
+        self.assertEqual(3, self.node.data)
 
 class TestsLinkedList(unittest.TestCase):
     def setUp(self):
