@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from flask import jsonify
 app=Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = 'uploads/'
@@ -9,12 +10,10 @@ app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif
 
 def upload():
 	if request.method == 'POST':
-		data={
-			'numeros': [1,2,3,4,5,7],
-			'media': 11,
-			'desviacion': 34.5
-		}
-		return data
+		num=[1,2,3,4,5,7]
+		media=11
+		desviacion=34.5
+		return jsonify(numeros=num, media=media, desviacion=desviacion)
 	else :
 		return render_template('template.html')
 
