@@ -4,13 +4,19 @@ class myExc(Exception): print "Exception! Your file contains non-numeric informa
 
 class LinkedList(object):
     def __init__(self):
-        nodeHead = None
+        nodeHead = Node()
     def createLinkedList(self):
         self.nodeHead = Node()
         self.nodeHead.createNode(0, None)
     def addNode(self, node):
-        self.nodeHead.link = node
-
+        node1 = self.nodeHead
+        node2 = None
+        while node1 != None:
+            node2 = node1
+            node1 = node1.link
+        node2.link = node
+        self.nodeHead.data += 1
+    
 class Node(object):
     def __init__(self):
         data = None

@@ -33,10 +33,13 @@ class TestsLinkedList(unittest.TestCase):
     def testAddFinalNode(self):
         node = Node()
         self.linkedList.createLinkedList()
-        self.linkedList.addNode(node.createNode(3, None))
-        self.linkedList.addNode(node.createNode(5, None))
-        self.linkedList.addNode(node.createNode(10, None))
-        self.assertEqual(node.data, self.linkedList.queue.data)
+        node.createNode(3, None)
+        self.linkedList.addNode(node)
+        node.createNode(5, None)
+        self.linkedList.addNode(node)
+        node.createNode(10, None)
+        self.linkedList.addNode(node)
+        self.assertEqual(3, self.linkedList.nodeHead.data)
 
 
 if __name__ == '__main__':
