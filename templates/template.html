@@ -52,13 +52,15 @@
 			</div>            
 			<div class="col-sm-6">
 				<form action="upload" method="post" enctype="multipart/form-data">
+					<p>Por favor ingrese un archivo .txt con los números que desea evaluar separados por salto de linea</p>
 					<input type="file" name="file" id="logo" class="btn btn-secondary btn-block">
 					<input class="btn btn-primary btn-block" type="submit" value="Calculate">
 				</form>
 				<div class="table-responsive">
 						<div class="text-center">
 							<h3>Datos a evaluar</h3>
-							<p>{% for i in numeros %}
+							<p>
+							{% for i in numeros %}
 							{{i}}
 							{% endfor %}</p>
 						</div>
