@@ -1,0 +1,28 @@
+body {
+    background-color: #a0c3f7;
+    top: 5px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Lobster', cursive;
+    font-style: oblique
+}
+p , input{
+    font-family: 'Lobster', cursive;
+    font-size: 120%;    
+}
+
+.row.content {height: 60%}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+}
