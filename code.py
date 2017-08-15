@@ -1,28 +1,39 @@
+import os
 from flask import Flask, request, render_template
-from flask import jsonify
 from werkzeug import secure_filename
 
 app=Flask(__name__)
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-app.config['UPLOAD_FOLDER'] = 'uploads/'
+@app.route("/")
+def index():
+	return render_template("template.html")
 
 
-def allowed_file(filename):
-	return '.' in filename and \
-		filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
-
-@app.route('/' , methods=['POST', 'GET'])
+@app.route('/upload' , methods=['POST'])
 def upload():
 	if request.method == 'POST':
+		target = os.path.join(APP_ROOT, 'images/')
+		print target
+		if not os.path.isdir(target):
+			os.mkdir(target)
+
+		for file in request.files.getlist('file'):
+			print file
+			filename=file.filename
+			destination='/'.join([target,filename])
+			file.save(destination)
+		return render_template('complete.html')
+
+		"""print 'entro por aca'
 		f=request.files['file']
-		file.save(os.path.join("/tmp/", filename))
+		file.save(os.path.join(app.config['UPLOAD_FOLDER'], f))"""
 		"""num=[1,2,3,4,5,7]
 		media=11
 		desviacion=34.5
 		return jsonify(numeros=num, media=media, desviacion=desviacion)"""
-		return 'file uploaded successfully'
 	else :
 		return render_template('template.html')
 
 if __name__ == '__main__':
-	app.run(debug=True, use_reloader=True)
+	app.run()
