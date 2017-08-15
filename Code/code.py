@@ -5,7 +5,7 @@ from flask import jsonify
 from werkzeug import secure_filename
 from Code.camilaCode import ReadFile
 from Code.niltonCode import CodeDeviation
-from jorgeCode import Mean
+from Code.jorgeCode import Mean
 
 app=Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
