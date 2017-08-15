@@ -15,7 +15,7 @@ def allowed_file(filename):
 def upload():
 	if request.method == 'POST':
 		f=request.files['file']
-		f.save(secure_filename(f.filename))	
+		file.save(os.path.join("/tmp/", filename))
 		"""num=[1,2,3,4,5,7]
 		media=11
 		desviacion=34.5
