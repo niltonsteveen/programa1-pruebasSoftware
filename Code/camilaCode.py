@@ -1,6 +1,6 @@
 import os
 
-#class myExc(Exception): print "Exception! Your file contains non-numeric information"
+class myExc(Exception): print "Exception! Your file contains non-numeric information"
 
 class ReadFile(object):
     def __init__(self):
