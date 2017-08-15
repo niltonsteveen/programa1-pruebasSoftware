@@ -21,7 +21,7 @@ def upload():
 			filename=file.filename
 			destination='/'.join([target,filename])
 			file.save(destination)
-		return render_template('complete.html')
+		return filename
 
 		"""print 'entro por aca'
 		f=request.files['file']
