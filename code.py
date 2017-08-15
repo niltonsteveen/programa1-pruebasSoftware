@@ -1,14 +1,20 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 app=Flask(__name__)
 
-@app.route('/', methods=['POST','GET'])
+app.config['UPLOAD_FOLDER'] = 'uploads/'
+# These are the extension that we are accepting to be uploaded
+app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+
+@app.route('/')
+def index():
+	return render_template('template.html')
+
+@app.route('/upload', methods=['POST'])
 def upload():
 	if request.method == 'POST':
-		fileUpload=request.files['file']
-	return render_template('template.html')
-def index():
-	if request.method == 'GET':
-		return 'Hola mundo'
+		file = request.files['file']
+		return 'se cargo'
+		
 
 if __name__ == '__main__':
 	app.run(debug=True, use_reloader=True)
