@@ -8,7 +8,8 @@ class LinkedList(object):
     def createLinkedList(self):
         self.nodeHead = Node()
         self.nodeHead.createNode(0, None)
-    
+    def addNode(self, node):
+        self.nodeHead.link = node
 
 class Node(object):
     def __init__(self):
