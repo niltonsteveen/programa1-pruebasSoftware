@@ -3,18 +3,19 @@ import unittest
 from jorgeCode import Mean
 
 class TestsMean(unittest.TestCase):
-	meanObject= Mean()
+	
 	def testEmpty(self):
-		array=[]		
-		mean=self.meanObject.calculateMean(array)
-		self.assertEqual(0, mean)
+		meanObject= Mean()
+		self.assertEqual(0, meanObject.calculateMean([]))
 	def testNotNumbers(self):
-		array=['fda', 43, 'saf']
-		mean=self.meanObject.calculateMean(array)
-		self.assertEqual(0, mean)
-	def zeroDivision(self):
-		array=[]
-		mean=self.meanObject.calculateMean(array)
-		self.assertEqual(0, mean)
+		meanObject1= Mean()
+		self.assertEqual(0, meanObject1.calculateMean(['fda', 43, 'saf']))
+	def testRealNumbers(self):
+		meanObject2= Mean()
+		self.assertNotEqual(2, meanObject2.calculateMean([1,1.7,3.8]))
+	def testZeroDivision(self):
+		meanObject3= Mean()
+		self.assertEqual(0, meanObject3.calculateMean([]))
+	
 if __name__ == '__main__':
 	unittest.main()
