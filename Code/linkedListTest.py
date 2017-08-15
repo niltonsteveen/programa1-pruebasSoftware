@@ -18,6 +18,11 @@ class TestNode(unittest.TestCase):
 class TestsLinkedList(unittest.TestCase):
     def setUp(self):
         self.linkedList = LinkedList()
+    def testCreateHeadNode(self):
+        node = Node()
+        node.createNode(0, None)
+        self.linkedList.createLinkedList()
+        self.assertEqual(node, self.linkedList.nodeHead)
 
 
 if __name__ == '__main__':
