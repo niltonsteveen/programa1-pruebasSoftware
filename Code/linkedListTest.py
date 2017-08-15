@@ -24,6 +24,11 @@ class TestsLinkedList(unittest.TestCase):
         self.linkedList.createLinkedList()
         self.assertEqual(node.data, self.linkedList.nodeHead.data)
         self.assertEqual(node.link, self.linkedList.nodeHead.link)
+    def testAddNode(self):
+        node = Node()
+        node.createNode(3, None)
+        self.linkedList.addNode(node)
+        self.assertEqual(node.data, self.linkedList.nodeHead.link.data)
 
 
 if __name__ == '__main__':
