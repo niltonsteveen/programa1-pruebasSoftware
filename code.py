@@ -9,13 +9,13 @@ app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif
 
 def upload():
 	if request.method == 'POST':
-		"""file = request.files['file']
+		file = request.files['file']
 		data={
 			'numeros': [1,2,3,4,5,7],
 			'media': 11,
 			'desviacion': 34.5
-		}"""
-		return 'entro por aca'
+		}
+		return file
 	else :
 		return render_template('template.html')
 
