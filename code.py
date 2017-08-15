@@ -13,15 +13,15 @@ def index():
 @app.route('/upload' , methods=['POST'])
 def upload():
 	if request.method == 'POST':
-		target = os.path.join(APP_ROOT, 'images/')
+		"""target = os.path.join(APP_ROOT, 'images/')
 		if not os.path.isdir(target):
-			os.mkdir(target)
+			os.mkdir(target)"""
 
 		for file in request.files.getlist('file'):
-			filename=file.filename
-			destination='/'.join([target,filename])
-			file.save(destination)
-		return filename
+			#filename=file.filename
+			#destination='/'.join([target,filename])
+			#file.save(destination)
+		return file
 
 		"""print 'entro por aca'
 		f=request.files['file']
