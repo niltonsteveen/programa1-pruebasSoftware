@@ -1,5 +1,5 @@
 import math
-from jorgeCode import Mean
+from Code.jorgeCode import Mean
 class CodeDeviation(object):
 	def __init__(self):
 		self.standardDeviation=0
