@@ -5,6 +5,7 @@ from flask import jsonify
 from werkzeug import secure_filename
 from Code.camilaCode import ReadFile
 from Code.niltonCode import CodeDeviation
+from jorgeCode import Mean
 
 app=Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -20,11 +21,12 @@ def index():
 def upload():
 	if request.method == 'POST':
 		f = request.files['file']
-		cd = CodeDeviation()		
+		cd = CodeDeviation()
+		mean = 	Mean()	
 		readFile = ReadFile()
 		readFile.readFile(f)
 		numeros=readFile.muestra
-		media=45
+		media= mean.calculateMean(numeros)
 		desviacion=cd.calcularDesviacion(cd.calcularNumerador(numeros), len(numeros))
 		salida=jsonify(numeros=numeros, media=media, desviacion=desviacion)
 		return render_template("template.html", numeros=numeros, media=media, desviacion=desviacion)

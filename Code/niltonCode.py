@@ -1,4 +1,5 @@
 import math
+from jorgeCode import Mean
 class CodeDeviation(object):
 	def __init__(self):
 		self.standardDeviation=0
@@ -17,7 +18,9 @@ class CodeDeviation(object):
 
 	def calcularNumerador(self,muestra):
 		resultado=0
-		media=45
+		meanObject=Mean()
+		media=meanObject.calculateMean(muestra)
+		print 'la media es : ' + str(media) 
 		for numero in muestra:
 			if type(numero) == int or type(numero) == float:
 				resultado = resultado + math.pow((numero - media), 2)
