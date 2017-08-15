@@ -7,11 +7,10 @@ class ReadFile(object):
         self.file=None
         self.muestra=[]
     def readFile(self, filename):
-        if not(os.path.exists(filename)):
-            return False
-        self.file = open(filename, 'r')
+        """if not(os.path.exists(filename)):
+            return False"""
         try:
-            for line in self.file.readlines():
+            for line in filename.readlines():
                 self.muestra.append(int(line))
         except myExc:
             raise myExc

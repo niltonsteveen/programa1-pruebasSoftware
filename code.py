@@ -1,7 +1,10 @@
 
 import os
 from flask import Flask, request, render_template
+from flask import jsonify
 from werkzeug import secure_filename
+from Code.camilaCode import ReadFile, myExc
+from Code.niltonCode import CodeDeviation
 
 app=Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -15,17 +18,14 @@ def index():
 def upload():
 	if request.method == 'POST':
 		f = request.files['file']
-		filename=f.filename
-		linea1 = f.readline()
-		return linea1
-
-		"""print 'entro por aca'
-		f=request.files['file']
-		file.save(os.path.join(app.config['UPLOAD_FOLDER'], f))"""
-		"""num=[1,2,3,4,5,7]
-		media=11
-		desviacion=34.5
-		return jsonify(numeros=num, media=media, desviacion=desviacion)"""
+		cd = CodeDeviation()		
+		readFile = ReadFile()
+		readFile.readFile(f)
+		numeros=readFile.muestra
+		media=45
+		desviacion=cd.calcularDesviacion(cd.calcularNumerador(numeros), len(numeros))
+		salida=jsonify(numeros=numeros, media=media, desviacion=desviacion)
+		return salida
 
 if __name__ == '__main__':
 	app.run()
