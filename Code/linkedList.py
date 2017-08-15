@@ -4,7 +4,11 @@ class myExc(Exception): print "Exception! Your file contains non-numeric informa
 
 class LinkedList(object):
     def __init__(self):
-        pass
+        nodeHead = None
+    def createLinkedList(self):
+        self.nodeHead = Node()
+        self.nodeHead.createNode(0, None)
+    
 
 class Node(object):
     def __init__(self):

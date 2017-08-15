@@ -22,7 +22,8 @@ class TestsLinkedList(unittest.TestCase):
         node = Node()
         node.createNode(0, None)
         self.linkedList.createLinkedList()
-        self.assertEqual(node, self.linkedList.nodeHead)
+        self.assertEqual(node.data, self.linkedList.nodeHead.data)
+        self.assertEqual(node.link, self.linkedList.nodeHead.link)
 
 
 if __name__ == '__main__':
