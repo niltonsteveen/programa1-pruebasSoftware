@@ -5,14 +5,15 @@ class Mean(object):
 	def __init__(self):
 		self.media=0
 	def calculateMean(self, array):
+		print len(array)
 		for x in array:
 			numberStr=str(x)
-			print numberStr
 			if numberStr.isdigit():
 				self.media=self.media+x
 			else:
 				self.media=0
 				break
+		self.media=self.media/len(array)
 		return self.media
 	
 

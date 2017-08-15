@@ -9,7 +9,11 @@ class TestsMean(unittest.TestCase):
 		mean=self.meanObject.calculateMean(array)
 		self.assertEqual(0, mean)
 	def testNotNumbers(self):
-		array=['fda', 43, 'saf'];
+		array=['fda', 43, 'saf']
+		mean=self.meanObject.calculateMean(array)
+		self.assertEqual(0, mean)
+	def zeroDivision(self):
+		array=[]
 		mean=self.meanObject.calculateMean(array)
 		self.assertEqual(0, mean)
 if __name__ == '__main__':
