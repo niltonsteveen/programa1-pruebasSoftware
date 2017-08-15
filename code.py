@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from flask import jsonify
 from werkzeug import secure_filename
-import os
+
 app=Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = 'uploads/'
@@ -15,7 +15,6 @@ def allowed_file(filename):
 def upload():
 	if request.method == 'POST':
 		f=request.files['file']
-		print type(f)
 		f.save(secure_filename(f.filename))	
 		"""num=[1,2,3,4,5,7]
 		media=11
