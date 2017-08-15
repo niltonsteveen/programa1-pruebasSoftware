@@ -5,7 +5,7 @@ class CodeDeviation(object):
 	def calcularDesviacion(self,numero, n):
 		esNegativo=False
 		resultado=None
-		if type(numero) == long or type(numero) == int or type(numero) == float:
+		if type(numero) == int or type(numero) == float:
 			if numero < 0:
 				esNegativo = True
 			else:
@@ -19,7 +19,7 @@ class CodeDeviation(object):
 		resultado=0
 		media=45
 		for numero in muestra:
-			if type(numero) == long or type(numero) == int or type(numero) == float:
+			if type(numero) == int or type(numero) == float:
 				resultado = resultado + math.pow((numero - media), 2)
 			else:
 				resultado=0

@@ -3,7 +3,7 @@ import os
 from flask import Flask, request, render_template
 from flask import jsonify
 from werkzeug import secure_filename
-from Code.camilaCode import ReadFile, myExc
+from Code.camilaCode import ReadFile
 from Code.niltonCode import CodeDeviation
 
 app=Flask(__name__)
