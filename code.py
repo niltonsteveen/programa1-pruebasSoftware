@@ -10,6 +10,8 @@ app=Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 #app=Flask(__name__, static_url_path='/Templates')
 
+salida = ""
+
 @app.route("/")
 def index():
 	return render_template("template.html")
@@ -25,7 +27,7 @@ def upload():
 		media=45
 		desviacion=cd.calcularDesviacion(cd.calcularNumerador(numeros), len(numeros))
 		salida=jsonify(numeros=numeros, media=media, desviacion=desviacion)
-		return salida
+		return render_template("template.html", numeros=numeros, media=media, desviacion=desviacion)
 
 if __name__ == '__main__':
 	app.run()
