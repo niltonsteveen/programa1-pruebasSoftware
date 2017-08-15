@@ -16,9 +16,10 @@ def upload():
 		"""target = os.path.join(APP_ROOT, 'images/')
 		if not os.path.isdir(target):
 			os.mkdir(target)"""
-
-		for file in request.files.getlist('file'):
-			filename=file.filename
+		f = request.files['file']
+		filename=f.filename
+		"""for file in request.files.getlist('file'):
+			filename=file.filename"""
 			#destination='/'.join([target,filename])
 			#file.save(destination)
 		return filename
