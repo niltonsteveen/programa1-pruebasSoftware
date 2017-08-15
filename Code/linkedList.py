@@ -13,3 +13,5 @@ class Node(object):
     def createNode(self, data, link):
         self.data = data
         self.link = link
+    def changeLink(self, node):
+        self.link = node
