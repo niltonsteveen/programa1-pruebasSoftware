@@ -20,7 +20,6 @@ class CodeDeviation(object):
 		resultado=0
 		meanObject=Mean()
 		media=meanObject.calculateMean(muestra)
-		print 'la media es : ' + str(media) 
 		for numero in muestra:
 			if type(numero) == int or type(numero) == float:
 				resultado = resultado + math.pow((numero - media), 2)
